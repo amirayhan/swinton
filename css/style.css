@@ -1,0 +1,388 @@
+/*
+tamplate name : Swinton | Resume Cv and Portfolio Template;
+aurtor : cyber_forest;
+version : 1.0;
+
+table 
+--------
+    1. common css
+    2. banner css
+    3. preloader css
+    4. banner css
+    5. demo css
+    6. features css
+    7. footer css
+    8. back2top css
+*/
+
+
+/* =====================
+common css start
+====================== */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-x: hidden;
+}
+ul,
+ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+    color: #2c2d32;
+}
+
+/* =====================
+common css end
+====================== */
+
+
+/* =====================
+preloader css start
+====================== */
+
+body.active_preloader {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999999999;
+}
+.preloader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #fff;
+    z-index: 9999999999;
+}
+.preloader-ripple {
+    background: url("../images/preloader.gif") no-repeat center center;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: scale(1.2);
+}
+
+/* =====================
+preloader css end
+====================== */
+
+
+/* =====================
+banner css start
+====================== */
+
+#banner {
+    overflow: hidden;
+    background: url('../images/banner.jpg') no-repeat fixed center/cover;
+    padding-top: 169px;
+    padding-bottom: 182px;
+    position: relative;
+}
+#banner::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2c2d32;
+    opacity: .85;
+}
+#banner .banner_content a img {
+    width: 200px;
+}
+#banner .banner_content p {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 27px;
+    text-transform: capitalize;
+    padding-top: 24px;
+    padding-bottom: 50px;
+}
+#banner .banner_content .s_btn {
+    font-family: 'Roboto', sans-serif;
+    color: #2c2d32;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 15px 30px;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background: #fff;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+}
+#banner .banner_content .s_btn:hover {
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+/* =====================
+banner css end
+====================== */
+
+
+/* =====================
+demo css start
+====================== */
+
+#demo {
+    overflow: hidden;
+    padding-top: 130px;
+    padding-bottom: 80px;
+}
+#demo .demo_header {
+    padding-bottom: 80px;
+}
+#demo .demo_header h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #2c2d32;
+    font-size: 34px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#demo .demo_content {
+    padding: 0 40px;
+}
+#demo .demo_content .demo-items {
+    padding-bottom: 50px;
+    overflow: hidden;
+}
+#demo .demo_content .demo-items .demo_img {
+    box-shadow: 0px 5px 40px -8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+#demo .demo_content .demo-items .demo_img:hover::before {
+    width: 100%;
+}
+#demo .demo_content .demo-items .demo_img:hover::after {
+    width: 100%;
+}
+#demo .demo_content .demo-items .demo_img:hover span {
+    top: 50%;
+}
+#demo .demo_content .demo-items .demo_img::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #2c2d32;
+    opacity: .5;
+    -webkit-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    transition: all linear 0.4s;
+}
+#demo .demo_content .demo-items .demo_img::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: #2c2d32;
+    opacity: .5;
+    -webkit-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    transition: all linear 0.4s;
+}
+#demo .demo_content .demo-items .demo_img span {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: #fff;
+    border: 2px solid #fff;
+    width: 60px;
+    height: 60px;
+    padding-top: 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    transition: all linear 0.4s;
+    z-index: 1;
+}
+#demo .demo_content .demo-items .demo_img span:hover {
+    color: #000;
+    background: #fff;
+    border: 2px solid #fff;
+}
+#demo .demo_content .demo-items .demo_bg {
+    width: 100%;
+    height: 100%;
+    background: #2c2d32;
+}
+#demo .demo_content .demo-items .demo_bg h2 {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+#demo .demo_content .demo-items h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #2c2d32;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 15px 0;
+}
+
+/* =====================
+demo css end
+====================== */
+
+
+/* =====================
+features css start
+====================== */
+
+#features {
+    overflow: hidden;
+    padding-top: 130px;
+    padding-bottom: 110px;
+    background: #ededed;
+}
+#features .features_header {
+    padding-bottom: 80px;
+}
+#features .features_header h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #2c2d32;
+    font-size: 34px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#features .features_items {
+    width: 100%;
+    height: 150px;
+    background: #ffffff;
+    padding-top: 25px;
+    margin-bottom: 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -ms-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+    transition: all linear 0.2s;
+}
+#features .features_items:hover {
+    padding-top: 15px;
+}
+#features .features_items span {
+    font-size: 45px;
+    color: #2c2d32;
+}
+#features .features_items h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #2c2d32;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+/* =====================
+features css end
+====================== */
+
+
+/* =====================
+footer css start
+====================== */
+
+#footer {
+    overflow: hidden;
+    height: 50px;
+    background: #2C2D32;
+}
+#footer p {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #fff;
+    line-height: 50px;
+    font-size: 13px;
+}
+
+/* =====================
+footer css end
+====================== */
+
+
+/* =====================
+back2top css start
+====================== */
+
+.back2top {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    display: none;
+    z-index: 33;
+}
+.back2top span {
+    width: 40px;
+    height: 40px;
+    background: #2c2d32;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+}
+.back2top span:hover {
+    background: #48494e;
+}
+
+/* =====================
+back2top css end
+====================== */

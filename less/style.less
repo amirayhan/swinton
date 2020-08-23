@@ -1,0 +1,417 @@
+/*
+tamplate name : realstate;
+aurtor : cyberforest;
+version : 1.0;
+
+table 
+--------
+    1. common css
+    2. header css
+    3. banner css
+*/
+
+
+/* common css start */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,
+ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+    color: @c1;
+}
+
+/* common css end */
+
+
+/* variable css start */
+
+@c1: #2C2D32;
+@c2: #2C2D32;
+@c3: #2C2D32;
+@b1: 1px solid @c1;
+@b2: 2px solid @c1;
+
+/* variable css end */
+
+
+/* mixins css start */
+
+.f1 {
+    font-family: 'Raleway', sans-serif;
+}
+.f2 {
+    font-family: 'Roboto', sans-serif;
+}
+.h1 {
+    .f1;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+}
+.h2 {
+    .f1;
+    color: @c1;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 17px;
+}
+.p1 {
+    .f2;
+    color: @c2;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+.tr(@time) {
+    -webkit-transition: all linear @time;
+    -moz-transition: all linear @time;
+    -ms-transition: all linear @time;
+    -o-transition: all linear @time;
+    transition: all linear @time;
+}
+.br (@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+.page-wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 300px;
+    background: #fff;
+    z-index: 9;
+    overflow: hidden;
+}
+
+/* mixins css end */
+
+
+/* =====================
+preloader css start
+====================== */
+
+body.active_preloader {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999999999;
+}
+.preloader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #fff;
+    z-index: 9999999999;
+}
+.preloader-ripple {
+    background: url("../images/preloader.gif") no-repeat center center;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: scale(1.2);
+}
+
+/* =====================
+preloader css end
+====================== */
+
+
+/* =====================
+banner css start
+====================== */
+
+#banner {
+    background: url('../images/banner.jpg') no-repeat center/cover;
+    padding-top: 150px;
+    padding-bottom: 182px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: @c1;
+        opacity: .7;
+    }
+    .banner_content {
+        h1 {
+            .f1;
+            color: #fff;
+            font-size: 70px;
+            text-transform: capitalize;
+        }
+        p {
+            .f2;
+            color: #fff;
+            font-size: 27px;
+            text-transform: capitalize;
+            padding-top: 24px;
+            padding-bottom: 50px;
+        }
+        a {
+            .f2;
+            color: @c1;
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 15px 30px;
+            text-decoration: none;
+            .br(5px);
+            border: 1px solid #fff;
+            background: #fff;
+            .tr(.3s);
+            &:hover {
+                color: #fff;
+                background: transparent;
+                border: 1px solid #fff;
+            }
+        }
+    }
+}
+
+/* =====================
+banner css end
+====================== */
+
+
+/* =====================
+demo css start
+====================== */
+
+#demo {
+    padding-top: 130px;
+    padding-bottom: 80px;
+    .demo_header {
+        padding-bottom: 80px;
+        h2 {
+            .f2;
+            color: @c1;
+            font-size: 34px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+    .demo_content {
+        padding: 0 40px;
+        .demo-items {
+            padding-bottom: 50px;
+            overflow: hidden;
+            .demo_img {
+                box-shadow: 0px 5px 40px -8px rgba(0, 0, 0, .1);
+                position: relative;
+                &:hover {
+                    &::before {
+                        width: 100%;
+                    }
+                    &::after {
+                        width: 100%;
+                    }
+                    span {
+                        top: 50%;
+                    }
+                }
+                &::before {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    background: @c1;
+                    opacity: .5;
+                    .tr(.4s);
+                }
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    right: 0;
+                    width: 0;
+                    height: 100%;
+                    background: @c1;
+                    opacity: .5;
+                    .tr(.4s);
+                }
+                span {
+                    position: absolute;
+                    top: -60px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 25px;
+                    color: #fff;
+                    border: 2px solid #fff;
+                    width: 60px;
+                    height: 60px;
+                    padding-top: 10px;
+                    .br(50%);
+                    .tr(.4s);
+                    z-index: 1;
+                    &:hover {
+                        color: #000;
+                        background: #fff;
+                        border: 2px solid #fff;
+                    }
+                }
+            }
+            .demo_bg {
+                width: 100%;
+                height: 100%;
+                background: @c1;
+                h2 {
+                    color: #fff;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                }
+            }
+            h3 {
+                .f2;
+                color: @c1;
+                font-size: 20px;
+                text-transform: uppercase;
+                padding: 15px 0;
+            }
+        }
+    }
+}
+
+/* =====================
+demo css end
+====================== */
+
+
+/* =====================
+features css start
+====================== */
+
+#features {
+    padding-top: 130px;
+    padding-bottom: 110px;
+    background: #ededed;
+    .features_header {
+        padding-bottom: 80px;
+        h2 {
+            .f2;
+            color: @c1;
+            font-size: 34px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+    .features_items {
+        width: 100%;
+        height: 150px;
+        background: #ffffff;
+        padding-top: 25px;
+        margin-bottom: 30px;
+        .br(5px);
+        .tr(.2s);
+        &:hover{
+            padding-top: 15px;
+        }
+        span {
+            font-size: 45px;
+            color: @c1;
+        }
+        h3 {
+            .f2;
+            color: @c1;
+            font-size: 20px;
+            text-transform: capitalize;
+        }
+    }
+}
+
+/* =====================
+features css end
+====================== */
+
+
+/* =====================
+footer css start
+====================== */
+
+#footer {
+    height: 50px;
+    background: #2C2D32;
+    p {
+        .f2;
+        text-align: center;
+        color: #fff;
+        line-height: 50px;
+        font-size: 13px;
+    }
+}
+
+/* =====================
+footer css end
+====================== */
+
+
+/* =====================
+back2top css start
+====================== */
+
+.back2top {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    display: none;
+    z-index: 33;
+}
+.back2top span {
+    width: 40px;
+    height: 40px;
+    background: @c1;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+}
+.back2top span:hover {
+    background: #48494e;
+}
+
+/* =====================
+back2top css end
+====================== */
